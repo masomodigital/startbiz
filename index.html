@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Share Button</title>
+    <style>
+        #progress-bar-container {
+            position: relative;
+            text-align: left;
+        }
+
+        #progress-bar-wrapper {
+            width: 100%;
+            height: 20px;
+            border: 1px solid #ddd;
+            display: flex; /* Added flex display for better layout */
+        }
+
+        #progress-growth {
+            height: 100%;
+            background-color: #4CAF50;
+            transition: width 0.5s ease-in-out;
+        }
+
+        #progress-text {
+            width: 30px; /* Adjust as needed */
+            height: 100%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        #table-container {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        /* Styling for the WhatsApp button */
+        #whatsapp-button {
+            background-color: #e74c3c; /* Red color */
+            color: #fff; /* White text color */
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #earnings-label {
+            font-weight: bold;
+        }
+
+        #earnings-value {
+            font-weight: bold;
+            color: #e74c3c; /* Red color */
+        }
+
+        h2 {
+            color: red;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Get Started Right Now!!</h2>
+
+    <p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Bookman Old Style&quot;,&quot;serif&quot;; font-size: 12pt; line-height: 115%; mso-bidi-font-size: 11.0pt;">One
+    of our staff will get in touch with you as soon as you complete this task and
+    train you how to install and activate the app for clients. Ensure you have a
+    smartphone and good internet access. Kindly note the following:-<o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="text-align: center;"><b><span style="font-family: &quot;Bookman Old Style&quot;,&quot;serif&quot;; font-size: 12pt; line-height: 115%; mso-bidi-font-size: 11.0pt;"><span style="color: red;">Get your first 15 clients now!</span></span></b></p><p class="MsoNormal" style="text-align: left; text-indent: 0px;"></p><ol style="text-align: left;"><li style="text-align: left;"><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">Click on the </span><b style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">"SHARE"</b><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;"> button below. Share with
+    5 groups or 15 friends on WhatsApp so that other youths and parents can be
+    aware of this opportunity. They will be your initial clients.</span></li><li style="text-align: left;"><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">After your 15</span><sup style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; text-align: justify; text-indent: -18pt;">th</sup><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">
+    share, </span><b style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">you will automatically be
+    redirected</b><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;"> to complete sign up. A trainer will train you for 10-15 minutes how to work and get paid instantly.</span></li></ol><p></p>
+
+    <p class="MsoNormal" style="text-align: center;"><span style="font-family: &quot;Bookman Old Style&quot;,&quot;serif&quot;; font-size: 12pt; line-height: 115%; mso-bidi-font-size: 11.0pt;">Click
+    the red <b>“share” </b>button below to get
+    started <b>NOW! <u>NB:</u>&nbsp;</b>Ensure you share properly, <b>OTHERWISE</b> the system will log you out.<b><o:p></o:p></b></span></p>
+
+    <div id="progress-bar-container">
+        <button id="whatsapp-button" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+        
+        <!-- Progress Bar with value -->
+        <div id="progress-bar-wrapper">
+            <div id="progress-growth"></div>
+            <div id="progress-text">0%</div>
+        </div>
+        
+        <!-- Remaining Shares and Earnings -->
+        <div id="table-container">
+            <table>
+                <tr>
+                    <th>Remaining shares:</th>
+                    <td id="remaining-shares-value">15</td>
+                </tr>
+                <tr>
+                    <th id="earnings-label"> Your Earnings:</th>
+                    <td id="earnings-value">Ksh.0.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let shares = 0;
+        let earnings = 0;
+
+        function shareOnWhatsApp() {
+            // Increment the share count
+            shares++;
+
+            // Calculate the percentage
+            const percentage = Math.min((shares / 15) * 100, 100);
+
+            // Update the progress bar width
+            document.getElementById('progress-growth').style.width = percentage + '%';
+            
+            // Update the progress text
+            document.getElementById('progress-text').innerText = `${Math.round(percentage)}%`;
+
+            // Update the remaining shares text and table cell
+            const remainingShares = 15 - shares;
+            document.getElementById('remaining-shares-value').innerText = remainingShares;
+            
+            // Update earnings and table cell
+            earnings += 100;
+            document.getElementById('earnings-value').innerText = `Ksh.${earnings.toFixed(2)}`;
+
+            // Check if the user has shared the link with 15 people
+            if (shares >= 15) {
+                // Redirect to the specified link after sharing with 15 people
+                window.location.href = 'https://sites.google.com/view/cbc-bulks/home';
+            } else {
+                // Updated message to be shared on WhatsApp
+                let message = encodeURIComponent("MAKE SH.1,500+ DAILY: CBC DIGITAL, a top online learning platform is not only enabling learners to access high-quality digital lessons but also providing jobs to scores of Kenyans who work as App Installers and Activators. The Standard Media Group say CBC DIGITAL is a smart business tool, besides being the best online learning platform. Train for 2-3 hours in 1 day, get a customized admin account and make UNLIMITED daily and monthly income by adding users to the CBC Google Group. If you have a smartphone, here is a smart golden opportunity for you! Get started by clicking here https://masomodigital.github.io/typex/");
+
+                // Open WhatsApp with the pre-filled message
+                window.location.href = `whatsapp://send?text=${message}`;
+            }
+        }
+    </script>
+
+</body>
+</html>
