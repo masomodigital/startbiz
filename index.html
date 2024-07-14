@@ -91,19 +91,10 @@
             display: inline-block;
         }
 
-        /* Styling for the Share button */
-        #share-button {
-            background-color: red; /* Red color */
-            color: #fff; /* White text color */
-            padding: 10px 20px;
-            margin-top: 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
+        h2 {
+            color: red;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
+            margin: 20px 0;
             animation: blink-animation 2s infinite; /* Blinking animation */
         }
 
@@ -111,12 +102,6 @@
             0% { opacity: 1; }
             50% { opacity: 0; }
             100% { opacity: 1; }
-        }
-
-        h2 {
-            color: red;
-            text-align: center;
-            margin: 20px 0;
         }
 
         h3 {
@@ -187,10 +172,7 @@
         <a id="activate-button" href="https://paystack.com/pay/app-activator" target="_blank">Activate CBC App Now!</a>
     </div>
 
-    <div id="share-instructions">
-        <h2 id="share-heading">That's it! Now share with your friends, sign them up and make unlimited daily income. Click the share button below and get started right away!</h2>
-        <a id="share-button" href="#">Share Now!</a>
-    </div>
+    <h2 id="share-heading">That's it! Now share with your friends, sign them up and make unlimited daily income. Click the share button below and get started right away!</h2>
 
     <div id="progress-bar-container">
         <button id="whatsapp-button" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
