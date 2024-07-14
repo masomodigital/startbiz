@@ -99,6 +99,17 @@
             font-weight: bold;
             text-align: center;
         }
+
+        /* Center align image */
+        #chart-container {
+            text-align: center;
+            margin-top: 20px; /* Added margin to separate from previous content */
+        }
+
+        #chart-container img {
+            max-width: 100%; /* Responsive width */
+            height: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
 <body>
@@ -111,6 +122,10 @@
     </div>
 
     <h3>The chart below also gives a step by step guide on the sign up process.</h3>
+
+    <div id="chart-container">
+        <img src="https://masomodigital.github.io/startbiz/chart.png" alt="Sign Up Process Chart">
+    </div>
 
     <div id="progress-bar-container">
         <button id="whatsapp-button" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
