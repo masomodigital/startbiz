@@ -91,13 +91,26 @@
             display: inline-block;
         }
 
-        #earnings-label {
+        /* Styling for the Share button */
+        #share-button {
+            background-color: red; /* Red color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            animation: blink-animation 2s infinite; /* Blinking animation */
         }
 
-        #earnings-value {
-            font-weight: bold;
-            color: #e74c3c; /* Red color */
+        @keyframes blink-animation {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         h2 {
@@ -172,6 +185,11 @@
     <div id="activate-instructions">
         <p>After downloading and installing the app to your smartphone, ACTIVATE the app to get access to the library PLUS join the CBC Digital Business! Click the ACTIVATE CBC APP button below.</p>
         <a id="activate-button" href="https://paystack.com/pay/app-activator" target="_blank">Activate CBC App Now!</a>
+    </div>
+
+    <div id="share-instructions">
+        <h2 id="share-heading">That's it! Now share with your friends, sign them up and make unlimited daily income. Click the share button below and get started right away!</h2>
+        <a id="share-button" href="#">Share Now!</a>
     </div>
 
     <div id="progress-bar-container">
