@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,26 +75,42 @@
             text-align: center;
             margin: 20px 0;
         }
+
+        h3 {
+            color: green; /* Green color */
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Center align iframe */
+        #audio-container {
+            text-align: center;
+            margin-bottom: 20px; /* Added margin to separate from next content */
+        }
+
+        #audio-container iframe {
+            display: inline-block;
+        }
+
+        /* Introducing paragraph style */
+        #intro-paragraph {
+            color: blue; /* Blue color */
+            font-weight: bold;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <h2>Get Started Right Now!!</h2>
 
-    <p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Bookman Old Style&quot;,&quot;serif&quot;; font-size: 12pt; line-height: 115%; mso-bidi-font-size: 11.0pt;">One
-    of our staff will get in touch with you as soon as you complete this task and
-    train you how to install and activate the app for clients. Ensure you have a
-    smartphone and good internet access. Kindly note the following:-<o:p></o:p></span></p>
+    <div id="audio-container">
+        <p id="intro-paragraph"><b>Click the PLAY button to listen to step by step guide into CBC Digital Business sign up process.</b></p>
+        <iframe allow="autoplay" frameborder="0" height="60" src="https://vocaroo.com/embed/1aVbIATAEF8H?autoplay=0" width="300"></iframe><br />
+    </div>
 
-    <p class="MsoNormal" style="text-align: center;"><b><span style="font-family: &quot;Bookman Old Style&quot;,&quot;serif&quot;; font-size: 12pt; line-height: 115%; mso-bidi-font-size: 11.0pt;"><span style="color: red;">Get your first 15 clients now!</span></span></b></p><p class="MsoNormal" style="text-align: left; text-indent: 0px;"></p><ol style="text-align: left;"><li style="text-align: left;"><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">Click on the </span><b style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">"SHARE"</b><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;"> button below. Share with
-    5 groups or 15 friends on WhatsApp so that other youths and parents can be
-    aware of this opportunity. They will be your initial clients.</span></li><li style="text-align: left;"><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">After your 15</span><sup style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; text-align: justify; text-indent: -18pt;">th</sup><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">
-    share, </span><b style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;">you will automatically be
-    redirected</b><span style="font-family: &quot;Bookman Old Style&quot;, &quot;serif&quot;; font-size: 12pt; text-align: justify; text-indent: -18pt;"> to complete sign up. A trainer will train you for 10-15 minutes how to work and get paid instantly.</span></li></ol><p></p>
-
-    <p class="MsoNormal" style="text-align: center;"><span style="font-family: &quot;Bookman Old Style&quot;,&quot;serif&quot;; font-size: 12pt; line-height: 115%; mso-bidi-font-size: 11.0pt;">Click
-    the red <b>“share” </b>button below to get
-    started <b>NOW! <u>NB:</u>&nbsp;</b>Ensure you share properly, <b>OTHERWISE</b> the system will log you out.<b><o:p></o:p></b></span></p>
+    <h3>The chart below also gives a step by step guide on the sign up process.</h3>
 
     <div id="progress-bar-container">
         <button id="whatsapp-button" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
